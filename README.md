@@ -13,6 +13,7 @@ There are many ways to install Tailwind CSS, I'll be going over how you can inst
     #### `$ yarn tailwind init -p`
 
 3. Configure template paths in `tailwind.config.js`
+    Every single file you use Tailwind CSS in, you'll need to add the filepath here
     ```
     content: [
         "./src/App.js
