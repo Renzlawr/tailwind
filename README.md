@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Getting started with Tailwind CSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation 
 
-## Available Scripts
+There are many ways to install Tailwind CSS, I'll be going over how you can install it with your React app. If you are interested in installing it a different way you can follow the installation setup [here](https://tailwindcss.com/docs/installation)
 
-In the project directory, you can run:
+1. Start by creating your React app
+    #### `$ yarn create react-app app-name`
+    #### `$ cd app-name`
 
-### `yarn start`
+2. Install Tailwind CSS
+    #### `$ yarn add -D tailwindcss postcss autoprefixer`
+    #### `$ yarn tailwind init -p`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Configure template paths in `tailwind.config.js`
+    ```
+    content: [
+        "./src/App.js
+    ],
+    ```
+    Make sure to restart your server everytime you add more template paths, you'll get errors otherwise.
+4. Add Tailwind CSS directives in `./src/index.css`
+    ```
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. Start your React app
+    #### `$ yarn start`
 
-### `yarn test`
+6. Now you're ready to start using Tailwind CSS!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Helpful Tools
 
-### `yarn build`
+I would recomment downloading the VS Code extension Tailwind CSS IntelliSense [here](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) as it provides us with autocomplete, hover previews, syntax highlighting, and linting!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Optional
+## Using Tailwind CSS with Preprocessors
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tailwind CSS is a PostCSS plugin so nothing is stopping you from using it with popular preprocessors like Sass. We installed PostCSS earlier so all we have to do is add this code to our `postcss.config.js` file
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    module.exports = {
+        plugins: {
+            'postcss-import': {},
+            tailwindcss: {},
+            autoprefixer: {},
+        }
+    }
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Make sure any @import statement is at the top of your file

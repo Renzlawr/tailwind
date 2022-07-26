@@ -1,10 +1,18 @@
-/** @type {import('tailwindcss').Config} */
+// @type {import('tailwindcss').Config}
 module.exports = {
   content: [
-    './src/App.js'
+    "./src/App.js",
+    "./src/pages/Home.js",
+    "./src/pages/NotFound.js",
+    "./src/components/Header.js",
+    "./src/components/Footer.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        main: ['Josefin Sans']
+      }
+    },
   },
   plugins: [],
 }
