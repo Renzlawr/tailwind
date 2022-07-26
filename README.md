@@ -34,18 +34,3 @@ There are many ways to install Tailwind CSS, I'll be going over how you can inst
 ## Helpful Tools
 
 I would recomment downloading the VS Code extension Tailwind CSS IntelliSense [here](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) as it provides us with autocomplete, hover previews, syntax highlighting, and linting!
-
-### Optional
-## Using Tailwind CSS with Preprocessors
-
-Tailwind CSS is a PostCSS plugin so nothing is stopping you from using it with popular preprocessors like Sass. We installed PostCSS earlier so all we have to do is add this code to our `postcss.config.js` file
-
-    module.exports = {
-        plugins: {
-            'postcss-import': {},
-            tailwindcss: {},
-            autoprefixer: {},
-        }
-    }
-
-Make sure any @import statement is at the top of your file
