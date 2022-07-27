@@ -1,5 +1,6 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import DoubleDropdownList from './DoubleDropdownList'
 
 const Header = () => {
   return (
@@ -15,20 +16,21 @@ const Header = () => {
           return (
             <div key={index} className="flex flex-col items-center hover:text-slate-300">
               <h1 className="peer cursor-pointer">{string}</h1>
+              {/* These are the Dropdown menus */}
               <div className="hidden peer-hover:flex hover:flex flex-col items-center rounded bg-white w-[200px] mt-10 absolute p-5">
                 <div className="absolute top-[-20px] w-0 h-0 border-[10px] border-solid border-transparent border-b-white" />
                 {[
                   ["First", "/first"],
                   ["Second", "/second"],
                   ["Third", "/third"],
-                ].map(([title, url], index) => {
+                ].map(([string, url], index) => {
                   return (
                     <NavLink
                       key={index}
                       to={url}
                       className="px-5 py-3 text-black hover:bg-gray-200 rounded cursor-pointer text-center w-full"
                     >
-                      {title}
+                      {string}
                     </NavLink>
                   )
                 })}

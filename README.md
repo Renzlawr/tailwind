@@ -9,7 +9,7 @@ There are many ways to install Tailwind CSS, I'll be going over how you can inst
     #### `$ cd app-name`
 
 2. Install Tailwind CSS
-    #### `$ yarn add -D tailwindcss postcss autoprefixer`
+    #### `$ yarn add -D tailwindcss`
     #### `$ yarn tailwind init -p`
 
 3. Configure template paths in `tailwind.config.js`
