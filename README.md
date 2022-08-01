@@ -16,7 +16,7 @@ There are many ways to install Tailwind CSS, I'll be going over how you can inst
     Every single file you use Tailwind CSS in, you'll need to add the filepath here
     ```
     content: [
-        "./src/App.js
+        "./src/App.js"
     ],
     ```
     Make sure to restart your server everytime you add more template paths, you'll get errors otherwise.
