@@ -20,6 +20,7 @@ There are many ways to install Tailwind CSS, I'll be going over how you can inst
     ],
     ```
     Make sure to restart your server everytime you add more template paths, you'll get errors otherwise.
+    
 4. Add Tailwind CSS directives in `./src/index.css`
     ```
     @tailwind base;
